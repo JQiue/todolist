@@ -1,0 +1,16 @@
+{
+  "id": "2963067",
+  "name": "todolist",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "15534438",
+      "name": "ic-todo-list",
+      "font_class": "ic-todo-list",
+      "unicode": "e7a2",
+      "unicode_decimal": 59298
+    }
+  ]
+}
