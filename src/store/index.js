@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    items: []
+    items: localStorage.getItem('todolist') ? JSON.parse(localStorage.getItem('todolist')).items : []
   },
   mutations: {
     save(state) {
@@ -27,7 +27,7 @@ export default new Vuex.Store({
       });
       this.commit('save');
     },
-    edit(state, {id, content}) {
+    edit(state, { id, content }) {
       state.items.forEach(element => {
         if (id == element.id) {
           element.content = content;

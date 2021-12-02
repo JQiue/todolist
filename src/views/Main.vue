@@ -19,10 +19,6 @@ export default {
   components: {
     Card,
   },
-  created() {
-    this.$store.state.items = JSON.parse(localStorage.getItem('todolist')).items;
-    console.log(this.$store.state.items);
-  },
 };
 </script>
 
