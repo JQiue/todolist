@@ -1,7 +1,8 @@
 <template>
   <div class="time">
     {{year}}-{{month}}-{{date}}
-    {{day | dayFormat}}<br>
+    {{day | dayFormat}}
+    {{hour | fill0}}:{{minute | fill0}}:{{second | fill0}}
   </div>
 </template>
 
@@ -32,10 +33,16 @@ export default {
     }
   },
   filters: {
-    dayFormat(value){
+    dayFormat(value) {
       const days = ['星期一', '星期二','星期三','星期四','星期五','星期六','星期日'];
       return days[value - 1];
     },
+    fill0(value) {
+      if(value < 10 ){
+        return '0' + value;
+      }
+      return value;
+    }
   },
   created(){
     setInterval(() => {
